@@ -1,0 +1,60 @@
+<canvas width = '650' height = '450'></canvas>
+
+<script>
+	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//  branca
+	pincel.fillStyle = 'white';
+	pincel.fillRect(0, 0, 650, 450);
+
+	// vermelho
+	pincel.fillStyle = 'red';
+	pincel.beginPath();
+	pincel.moveTo(125, 0);
+	pincel.lineTo(650, 0);
+	pincel.lineTo(650, 150);
+	pincel.lineTo(350, 150);
+	pincel.fill();
+
+	// azul
+	pincel.fillStyle = 'blue';
+	pincel.beginPath();
+	pincel.moveTo(350, 300);
+	pincel.lineTo(650, 300);
+	pincel.lineTo(650, 450);
+	pincel.lineTo(125, 450);
+	pincel.fill();
+
+	// verde
+	pincel.fillStyle = 'green';
+	pincel.beginPath();
+	pincel.moveTo(0, 0);
+	pincel.lineTo(75, 0);
+	pincel.lineTo(340, 180);
+	pincel.lineTo(650, 180);
+	pincel.lineTo(650, 275);
+	pincel.lineTo(340, 275);
+	pincel.lineTo(75, 450);
+	pincel.lineTo(0, 450);
+	pincel.fill();
+
+	// amarelo
+	pincel.fillStyle = 'gold';
+	pincel.beginPath();
+	pincel.moveTo(0, 65);
+	pincel.lineTo(245, 225);
+	pincel.lineTo(0, 385);
+	pincel.fill();
+
+	// preto
+	pincel.fillStyle = 'black';
+	pincel.beginPath();
+	pincel.moveTo(0, 100);
+	pincel.lineTo(190, 225);
+	pincel.lineTo(0, 350);
+	pincel.fill();
+
+
+</script>

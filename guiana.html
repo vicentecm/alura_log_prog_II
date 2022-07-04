@@ -1,0 +1,46 @@
+<canvas width="650" height="450"></canvas>
+
+<script>
+	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//retangulo  cor verde
+	pincel.fillStyle = 'green'; // pega a cor verde
+	pincel.fillRect(0, 0, 650, 450); // preencher
+
+	// triagulo branco
+	pincel.fillStyle = 'white'; // pega a cor branca
+	pincel.beginPath(); // mão livre
+	pincel.moveTo(0, 15);
+	pincel.lineTo(700, 225);
+	pincel.lineTo(0, 435);
+	pincel.fill();
+
+	// triangulo amarelo
+	pincel.fillStyle = 'yellow'; // pega a cor amarela
+	pincel.beginPath();
+	pincel.moveTo(0, 30);
+	pincel.lineTo(630, 225);
+	pincel.lineTo(0, 420);
+	pincel.fill();
+
+	// triangulo preto
+	pincel.fillStyle = 'black'; // pega a cor amarela
+	pincel.beginPath();
+	pincel.moveTo(0, 30);
+	pincel.lineTo(325, 225);
+	pincel.lineTo(0, 420);
+	pincel.fill();
+
+	// triangulo vermelho
+	pincel.fillStyle = 'red'; // pega a cor vermelha
+	pincel.beginPath(); // mão livre
+	pincel.moveTo(0, 60);
+	pincel.lineTo(260, 225);
+	pincel.lineTo(0, 390);
+	pincel.fill();
+
+</script>
+
+<br>Bandeira da Guiana

@@ -1,0 +1,31 @@
+<!-- Bandeira da Itália com function. Teste da aula 2.3-->
+<canvas width="600" height="399"></canvas>
+
+<script>
+	
+	function desenhaRetangulo(cor, xInicio, yInicio, xFim, yFim) {
+		var tela = document.querySelector('canvas');
+		var pincel = tela.getContext('2d');
+
+		pincel.fillStyle = cor;
+		pincel.fillRect(xInicio, yInicio, xFim, yFim);
+	}
+
+	function italia() {
+		desenhaRetangulo('green', 0, 0, 200, 400);
+		desenhaRetangulo('white', 200, 0, 400, 400);
+		desenhaRetangulo('red', 400, 0, 600, 400);
+	}
+	
+	function alemanha() {
+	desenhaRetangulo('black', 0, 0, 600, 133);
+	desenhaRetangulo('red', 0, 133, 600, 266);
+	desenhaRetangulo('yellow', 0, 266, 600, 399);
+	}
+	
+	//italia();
+	alemanha();
+
+
+
+</script>

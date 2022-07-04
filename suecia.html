@@ -1,0 +1,23 @@
+<canvas width = "650" height = "450"></canvas>
+
+<script>
+
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	
+	//azul royal
+	pincel.fillStyle = 'darkblue';
+	pincel.fillRect(0, 0, 650, 450);
+
+	// barra horizontal
+	pincel.fillStyle = 'gold';
+	pincel.fillRect(0, 170, 650, 75);
+
+	// barra vertical
+	pincel.fillStyle = 'gold';
+	pincel.fillRect(150, 0, 75, 450);
+
+
+</script>
+

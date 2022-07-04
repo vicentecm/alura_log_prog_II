@@ -1,0 +1,29 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//fazendo o retangulo maior verde escuro
+	pincel.fillStyle = 'darkgreen';
+	pincel.fillRect(0, 0, 600, 400);
+
+	pincel.fillStyle = 'black';
+	// olho lado esquerdo
+	pincel.fillRect(70, 110, 90, 90); // inicio do ponto e tamanho
+	// olho lado direito
+	pincel.fillRect(230, 110, 90, 90);
+
+	//nariz
+	pincel.fillRect(160, 200, 70, 100);
+
+	// boca (2 partes)
+
+	pincel.fillRect(120, 250, 40, 110);
+	pincel.fillRect(230, 250, 40, 110);	
+
+
+
+</script>
+

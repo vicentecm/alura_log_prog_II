@@ -1,0 +1,28 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas'); //cria uma var para o canvas
+    var pincel = tela.getContext('2d'); // cria var para informar o tipo de tela 2D
+
+    pincel.fillStyle = 'lightgrey'; // pega na paleta a cor verde claro
+    pincel.fillRect(0, 0, 600, 400); // // forma retangular, inicia o eixo x0, y0, percorre até o eixo x600, y400 (todo o canvas)
+
+    pincel.fillStyle = 'green';  // pega a paleta cor verde
+    pincel.fillRect(0, 0, 200, 400); // inicia no eixo x0, y0, preenchedo até o x200, y400
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();       // indica que o pincel iniciará seu caminho para desenhos diferentes de só preenchimento de retangulo
+    pincel.moveTo(300, 200);  // mova até o eixo x300, y200 (centro do canvas neste caso)
+    pincel.lineTo(200, 400);  // trace uma linha até x200, y400
+    pincel.lineTo(400, 400);  // trace uma linha até x400, y400
+    pincel.fill();            // preencha o formato criado na cor anteriormente pega na paleta (yellow)
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
+</script>
