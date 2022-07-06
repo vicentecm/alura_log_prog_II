@@ -1,22 +1,43 @@
-<canvas width="600"  height="400"></canvas>
+<canvas width="600" height="400"></canvas>
 
 <script>
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
-
     pincel.fillStyle = 'grey';
     pincel.fillRect(0, 0, 600, 400);
 
-    function desenhaCirculo(evento){
-    	var x = evento.pageX - tela.offsetLeft; // desconta o que esta fora do canvas do lado esquerdo;
-    	var y = evento.pageY - tela.offsetTop;  // desconta o que esta fora do canvas no topo;
-    	pincel.beginPath();
-    	pincel.fillStyle = 'blue';
-    	pincel.arc(x, y, 10, 0,  2 * 3.14);
-    	pincel.fill();
-    	console.log("ponto do click = " + x + ',' + y);
-    	
+    var posicaoCor = 0;                      // posicao inicial da array                  
+    var cores = ['blue', 'red', 'green', 'black', 'yellow'];    // array com as cores do problema
+
+
+    function desenhaCirculo(evento) {                       // chamada com o clique botão esquerdo
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        pincel.fillStyle = cores[posicaoCor];               //  var cores[posição atual]
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+    }
+    
+    function mudaCor() {                                 // função chamada ao clicar com o botão direito
+        
+        posicaoCor++;                                    // soma 1 a posição atual, assim passando toda a array
+        
+        if (posicaoCor >= cores.length) {                 // se a posição for maior que o tamanho a array, zerar a posição         
+            posicaoCor = 0;
+        }                                                  // caso não for maior
+        return false;
     }
 
-    tela.onclick = desenhaCirculo;
+    tela.onclick = desenhaCirculo;                   // ao clicar com botão esquerdo, chamar a função desenhaCirculo
+
+    tela.oncontextmenu = mudaCor;
+
+
 </script>
+
+
+
+
