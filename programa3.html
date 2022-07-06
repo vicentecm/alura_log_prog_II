@@ -8,8 +8,8 @@
     pincel.fillRect(0, 0, 600, 400);
 
     function desenhaCirculo(evento){
-    	var x = evento.pageX - tela.offsetLeft; // desconta o que esta fora do canvas do lado esquerdo
-    	var y = evento.pageY - tela.offsetTop;  // desconta o que esta fora do canvas no topo
+    	var x = evento.pageX - tela.offsetLeft; // desconta o que esta fora do canvas do lado esquerdo;
+    	var y = evento.pageY - tela.offsetTop;  // desconta o que esta fora do canvas no topo;
     	pincel.beginPath();
     	pincel.fillStyle = 'blue';
     	pincel.arc(x, y, 10, 0,  2 * 3.14);
