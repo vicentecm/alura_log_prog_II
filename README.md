@@ -1,4 +1,4 @@
 # alura_log_prog_II
 Curso Lógica Programação II
 
-Próxima aula = 3.7 (fazer exercício)
+Próxima aula = 3.8 (fazer exercício)
