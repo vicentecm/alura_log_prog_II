@@ -1,0 +1,65 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var raio = 10;
+    var maxRaio = 40;
+    var minRaio = 10;
+
+
+    function desenhaCirculo(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        
+        // se shift pressionado
+        if (evento.shiftKey) {                                 // se shift pressionado, a var raio torna-se 30.
+            if (raio < (maxRaio - 10)) {
+                raio = raio + 10;
+                CalculaArc();
+
+            } else {
+                raio = maxRaio
+                CalculaArc();
+            }
+        }
+
+        // se alt pressionado
+        if (evento.altKey) {
+            if (raio > minRaio) {
+            raio = raio - 5;
+            CalculaArc();
+        } else {
+            raio = minRaio
+            CalculaArc();
+            }
+        }
+
+        if (evento.shiftKey == false && evento.altKey == false) {
+            CalculaArc();
+        }
+
+        function CalculaArc() {
+            pincel.arc(x, y, raio, 0, 2 * 3.14);            
+            pincel.fill();
+            console.log(x + ',' + y + 'raio = ' + raio);
+        }
+
+
+    }
+
+    tela.onclick = desenhaCirculo;
+
+
+
+
+</script>
